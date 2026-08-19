@@ -1,6 +1,29 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============================================
+   Mobile menu toggle
+   ============================================ */
+(function navToggle() {
+  const btn = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!btn || !links) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('is-open');
+    btn.classList.toggle('is-open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  links.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      btn.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* ============================================
    SIGNATURE: rank ticker — climbs as the visitor
    scrolls through the page, from #47 down to #1
    ============================================ */
