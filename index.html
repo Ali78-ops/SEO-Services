@@ -36,6 +36,53 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
+  <svg class="hero-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF"/>
+        <stop offset="55%" stop-color="#FCF4E3"/>
+        <stop offset="100%" stop-color="#F4D58D"/>
+      </linearGradient>
+      <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#F4D58D" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#F4D58D" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#A9C0AA"/>
+        <stop offset="100%" stop-color="#8AAB8D"/>
+      </linearGradient>
+      <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5C8064"/>
+        <stop offset="100%" stop-color="#436B4C"/>
+      </linearGradient>
+      <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2F4B3C"/>
+        <stop offset="100%" stop-color="#1F332A"/>
+      </linearGradient>
+    </defs>
+
+    <rect x="0" y="0" width="1600" height="900" fill="url(#skyGrad)"/>
+    <circle cx="1180" cy="480" r="260" fill="url(#sunGlow)"/>
+    <circle cx="1180" cy="480" r="70" fill="#F4D58D" opacity="0.85"/>
+
+    <!-- far mountain layer -->
+    <path d="M0,620 L120,540 L260,600 L400,500 L560,590 L720,510 L880,580 L1040,520 L1200,600 L1360,530 L1600,610 L1600,900 L0,900 Z" fill="url(#mtnFar)" opacity="0.55"/>
+
+    <!-- mid mountain layer -->
+    <path d="M0,700 L150,600 L320,680 L480,570 L650,660 L820,560 L980,650 L1150,580 L1320,670 L1600,590 L1600,900 L0,900 Z" fill="url(#mtnMid)" opacity="0.75"/>
+
+    <!-- climbing trail: rises from bottom-left to the summit marker -->
+    <path d="M60,860 C 260,780 340,820 420,740 S 620,660 760,690 S 980,560 1060,560 S 1180,500 1210,478" fill="none" stroke="#FFFDF9" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="60" cy="860" r="7" fill="#B85C4A"/>
+    <text x="78" y="866" font-family="'JetBrains Mono', monospace" font-size="20" fill="#5C5148">#47</text>
+    <circle cx="1210" cy="478" r="9" fill="#C1442E"/>
+    <circle cx="1210" cy="478" r="16" fill="none" stroke="#C1442E" stroke-width="2" opacity="0.5"/>
+    <text x="1228" y="472" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#1A1613">#1</text>
+
+    <!-- near mountain layer (foreground) -->
+    <path d="M0,900 L0,760 L180,660 L340,740 L520,630 L700,720 L900,640 L1080,730 L1260,650 L1440,740 L1600,680 L1600,900 Z" fill="url(#mtnNear)"/>
+  </svg>
+
   <div class="hero-inner">
     <p class="eyebrow">A note from your future SEO partner</p>
     <h1 class="hero-title">
