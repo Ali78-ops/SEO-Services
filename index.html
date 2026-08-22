@@ -47,12 +47,8 @@
 <section class="hero" id="top">
   <div class="hero-glow" aria-hidden="true"></div>
 
-  <!-- Faint brand watermark. Replace/remove this block once you drop in your own hero image. -->
-  <svg class="hero-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M24 6C22 14 18 20 10 24C18 25 22 29 24 36C26 29 30 25 38 24C30 20 26 14 24 6Z" fill="#C9A227"/>
-  </svg>
-
-  <div class="hero-inner">
+  <div class="hero-inner hero-grid">
+    <div class="hero-col-text">
     <p class="eyebrow">Climb Higher. See Further.</p>
     <h1 class="hero-title">
       Right now, someone is<br>
@@ -85,6 +81,69 @@
       Show me the plan
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+    </div>
+
+    <!-- ANIMATED STORY REEL — placeholder for your own video later.
+         Cycles automatically: problem -> struggle -> fix -> climb -> win.
+         Swap this whole <div class="hero-reel">...</div> block for a <video> tag once you have real footage. -->
+    <div class="hero-col-visual">
+      <div class="hero-reel" id="heroReel" aria-hidden="true">
+
+        <div class="reel-step is-active" data-step="0">
+          <span class="reel-tag reel-tag-bad">STUCK</span>
+          <div class="reel-face">
+            <svg class="reel-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M9 9L15 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="reel-number">47</span>
+          </div>
+          <p class="reel-caption">Buried on page 3. Nobody's scrolling that far.</p>
+        </div>
+
+        <div class="reel-step" data-step="1">
+          <span class="reel-tag reel-tag-bad">INVISIBLE</span>
+          <svg class="reel-graph" viewBox="0 0 220 90" fill="none">
+            <polyline points="10,20 50,32 90,30 130,55 170,50 210,74" stroke="#B0A896" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="reel-caption">Traffic slipping away, month after month.</p>
+        </div>
+
+        <div class="reel-step" data-step="2">
+          <span class="reel-tag reel-tag-mid">THE FIX</span>
+          <ul class="reel-checklist">
+            <li><span class="reel-check">✓</span> Technical audit</li>
+            <li><span class="reel-check">✓</span> Content strategy</li>
+            <li><span class="reel-check">✓</span> Authority &amp; backlinks</li>
+          </ul>
+          <p class="reel-caption">A real plan, applied — not guesswork.</p>
+        </div>
+
+        <div class="reel-step" data-step="3">
+          <span class="reel-tag reel-tag-mid">CLIMBING</span>
+          <div class="reel-face">
+            <svg class="reel-icon reel-icon-up" viewBox="0 0 24 24" fill="none"><path d="M4 16L10 10L14 14L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 6H20V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="reel-number reel-number-mid">12</span>
+          </div>
+          <p class="reel-caption">Real movement — visible in weeks, not years.</p>
+        </div>
+
+        <div class="reel-step" data-step="4">
+          <span class="reel-tag reel-tag-good">#1</span>
+          <div class="reel-face">
+            <svg class="reel-icon reel-icon-good" viewBox="0 0 24 24" fill="none"><path d="M5 13L10 18L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="reel-number reel-number-good">1</span>
+          </div>
+          <p class="reel-caption reel-caption-good">This is what winning looks like.</p>
+        </div>
+
+        <div class="reel-dots" id="reelDots">
+          <span class="reel-dot is-active"></span>
+          <span class="reel-dot"></span>
+          <span class="reel-dot"></span>
+          <span class="reel-dot"></span>
+          <span class="reel-dot"></span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 

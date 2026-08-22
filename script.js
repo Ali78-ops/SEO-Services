@@ -1,6 +1,36 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============================================
+   Hero story reel — auto-cycles problem -> fix -> win.
+   Placeholder for a real video later; swap the markup
+   for a <video> tag and remove this block when ready.
+   ============================================ */
+(function heroReel() {
+  const reel = document.getElementById('heroReel');
+  const dotsWrap = document.getElementById('reelDots');
+  if (!reel || !dotsWrap) return;
+
+  const steps = reel.querySelectorAll('.reel-step');
+  const dots = dotsWrap.querySelectorAll('.reel-dot');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+  const durationMs = 2400;
+
+  function show(i) {
+    steps.forEach((s, n) => s.classList.toggle('is-active', n === i));
+    dots.forEach((d, n) => d.classList.toggle('is-active', n === i));
+  }
+
+  show(0);
+  if (prefersReducedMotion) return;
+
+  setInterval(() => {
+    index = (index + 1) % steps.length;
+    show(index);
+  }, durationMs);
+})();
+
+/* ============================================
    Scroll reveal — fades/slides content in as it
    enters the viewport
    ============================================ */

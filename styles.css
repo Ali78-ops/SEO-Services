@@ -261,17 +261,6 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 600; colo
   pointer-events: none;
   z-index: 0;
 }
-.hero-mark {
-  position: absolute;
-  top: 50%;
-  right: 6%;
-  width: 420px;
-  height: 420px;
-  transform: translateY(-50%);
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: 0;
-}
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -279,6 +268,120 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 600; colo
   margin: 0 auto;
   width: 100%;
   padding: 0 40px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-col-visual { display: flex; justify-content: center; }
+
+/* ============================================
+   HERO STORY REEL — animated placeholder
+   ============================================ */
+.hero-reel {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  min-height: 420px;
+  aspect-ratio: 3 / 4;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+.reel-step {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 32px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.reel-step.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.reel-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.reel-tag-bad { background: rgba(176, 168, 150, 0.12); color: var(--ink-soft); }
+.reel-tag-mid { background: rgba(201, 162, 39, 0.14); color: var(--gold-light); }
+.reel-tag-good { background: var(--gold); color: var(--bg); }
+.reel-face { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.reel-icon { width: 36px; height: 36px; color: var(--ink-faint); }
+.reel-icon-up { color: var(--gold-light); }
+.reel-icon-good { color: var(--gold); }
+.reel-number { font-family: var(--font-mono); font-size: 56px; font-weight: 500; color: var(--ink-faint); line-height: 1; }
+.reel-number-mid { color: var(--gold-light); }
+.reel-number-good { font-size: 64px; color: var(--gold); }
+.reel-graph { width: 100%; max-width: 220px; height: auto; }
+.reel-checklist { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.reel-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  opacity: 0;
+  transform: translateX(-8px);
+  animation: reelCheckIn 0.4s ease forwards;
+}
+.reel-step.is-active .reel-checklist li:nth-child(1) { animation-delay: 0.15s; }
+.reel-step.is-active .reel-checklist li:nth-child(2) { animation-delay: 0.5s; }
+.reel-step.is-active .reel-checklist li:nth-child(3) { animation-delay: 0.85s; }
+@keyframes reelCheckIn { to { opacity: 1; transform: translateX(0); } }
+.reel-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(201, 162, 39, 0.16);
+  color: var(--gold-light);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.reel-caption { font-size: 14px; color: var(--ink-soft); line-height: 1.6; max-width: 240px; }
+.reel-caption-good { color: var(--gold-light); font-weight: 500; }
+.reel-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+.reel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.reel-dot.is-active { background: var(--gold); transform: scale(1.3); }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-col-visual { margin-top: 8px; }
+  .hero-reel { max-width: 300px; }
 }
 .eyebrow {
   font-family: var(--font-mono);
@@ -812,6 +915,5 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 600; colo
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
   .section-inner { padding: 72px 24px; }
   .hero { padding: 100px 0 90px; }
-  .hero-mark { width: 260px; height: 260px; opacity: 0.06; }
   :root { --section-pad: 72px; }
 }
