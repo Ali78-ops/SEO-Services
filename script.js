@@ -1,6 +1,26 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============================================
+   Scroll reveal — fades/slides content in as it
+   enters the viewport
+   ============================================ */
+(function scrollReveal() {
+  const targets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  targets.forEach((el) => observer.observe(el));
+})();
+
+/* ============================================
    Mobile menu toggle
    ============================================ */
 (function navToggle() {

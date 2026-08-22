@@ -3,18 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rank Higher, Worry Less — SEO That Actually Moves the Needle</title>
-<meta name="description" content="A personal, no-fluff SEO partnership. See the process, the timeline, and exactly what you'll get in each package.">
+<title>TALON — Climb Higher. See Further. | SEO Search & Technology</title>
+<meta name="description" content="TALON is a personal, no-fluff SEO partnership. See the process, the timeline, and exactly what you'll get in each package.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#top" class="nav-mark">Your Name<span class="nav-dot">·</span>SEO</a>
+    <a href="#top" class="nav-brand">
+      <svg class="nav-mark-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 6C22 14 18 20 10 24C18 25 22 29 24 36C26 29 30 25 38 24C30 20 26 14 24 6Z" fill="#C9A227"/>
+        <path d="M24 6C22 14 18 20 10 24C15 24.6 18 26.4 20.5 29" stroke="#E8C468" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      <span>
+        <span class="nav-mark">TALON</span>
+        <span class="nav-mark-sub">SEARCH &amp; TECHNOLOGY</span>
+      </span>
+    </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span class="nav-toggle-bar"></span>
@@ -35,62 +45,22 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <svg class="hero-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#FFFFFF"/>
-        <stop offset="55%" stop-color="#FCF4E3"/>
-        <stop offset="100%" stop-color="#F4D58D"/>
-      </linearGradient>
-      <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#F4D58D" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="#F4D58D" stop-opacity="0"/>
-      </radialGradient>
-      <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#A9C0AA"/>
-        <stop offset="100%" stop-color="#8AAB8D"/>
-      </linearGradient>
-      <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#5C8064"/>
-        <stop offset="100%" stop-color="#436B4C"/>
-      </linearGradient>
-      <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#2F4B3C"/>
-        <stop offset="100%" stop-color="#1F332A"/>
-      </linearGradient>
-    </defs>
+  <div class="hero-glow" aria-hidden="true"></div>
 
-    <rect x="0" y="0" width="1600" height="900" fill="url(#skyGrad)"/>
-    <circle cx="1180" cy="480" r="260" fill="url(#sunGlow)"/>
-    <circle cx="1180" cy="480" r="70" fill="#F4D58D" opacity="0.85"/>
-
-    <!-- far mountain layer -->
-    <path d="M0,620 L120,540 L260,600 L400,500 L560,590 L720,510 L880,580 L1040,520 L1200,600 L1360,530 L1600,610 L1600,900 L0,900 Z" fill="url(#mtnFar)" opacity="0.55"/>
-
-    <!-- mid mountain layer -->
-    <path d="M0,700 L150,600 L320,680 L480,570 L650,660 L820,560 L980,650 L1150,580 L1320,670 L1600,590 L1600,900 L0,900 Z" fill="url(#mtnMid)" opacity="0.75"/>
-
-    <!-- climbing trail: rises from bottom-left to the summit marker -->
-    <path d="M60,860 C 260,780 340,820 420,740 S 620,660 760,690 S 980,560 1060,560 S 1180,500 1210,478" fill="none" stroke="#FFFDF9" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.9"/>
-    <circle cx="60" cy="860" r="7" fill="#B85C4A"/>
-    <text x="78" y="866" font-family="'JetBrains Mono', monospace" font-size="20" fill="#5C5148">#47</text>
-    <circle cx="1210" cy="478" r="9" fill="#C1442E"/>
-    <circle cx="1210" cy="478" r="16" fill="none" stroke="#C1442E" stroke-width="2" opacity="0.5"/>
-    <text x="1228" y="472" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#1A1613">#1</text>
-
-    <!-- near mountain layer (foreground) -->
-    <path d="M0,900 L0,760 L180,660 L340,740 L520,630 L700,720 L900,640 L1080,730 L1260,650 L1440,740 L1600,680 L1600,900 Z" fill="url(#mtnNear)"/>
+  <!-- Faint brand watermark. Replace/remove this block once you drop in your own hero image. -->
+  <svg class="hero-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M24 6C22 14 18 20 10 24C18 25 22 29 24 36C26 29 30 25 38 24C30 20 26 14 24 6Z" fill="#C9A227"/>
   </svg>
 
   <div class="hero-inner">
-    <p class="eyebrow">A note from your future SEO partner</p>
+    <p class="eyebrow">Climb Higher. See Further.</p>
     <h1 class="hero-title">
       Right now, someone is<br>
-      searching for what you sell hello dfgdgtfdfgdgfd—<br>
+      searching for what you sell —<br>
       <span class="hero-title-accent">and finding someone else.</span>
     </h1>
     <p class="hero-sub">
-      I'm <strong>[Your Name]</strong>. I help businesses like yours climb from
+      I'm <strong>[Your Name]</strong>, founder of TALON. I help businesses like yours climb from
       page 3 to position 1 — with a plan you can actually see, month by month.
       No jargon, no black box. Just a search bar that tells the truth.
     </p>
@@ -123,7 +93,7 @@
   <div class="section-inner">
     <p class="section-eyebrow">Let's name the real problem</p>
     <h2 class="section-title">You don't need "more SEO stuff." You need to be found.</h2>
-    <div class="problem-grid">
+    <div class="problem-grid reveal-stagger">
       <div class="problem-card">
         <span class="problem-mark">✕</span>
         <p>Your website looks great, but nobody's typing your URL directly — they're searching, and Google isn't showing you.</p>
@@ -147,7 +117,7 @@
     <p class="section-eyebrow">The scope, honestly laid out</p>
     <h2 class="section-title">Here's the actual timeline — not a promise, a plan.</h2>
 
-    <div class="timeline">
+    <div class="timeline reveal-stagger">
       <div class="timeline-item">
         <div class="timeline-marker">
           <span class="timeline-num">01</span>
@@ -198,7 +168,7 @@
   <div class="section-inner">
     <p class="section-eyebrow">What "working" looks like</p>
     <h2 class="section-title">Results, in numbers you can check yourself</h2>
-    <div class="results-grid">
+    <div class="results-grid reveal-stagger">
       <div class="result-stat">
         <span class="result-number">+<span class="counter" data-target="187">0</span>%</span>
         <span class="result-label">Organic traffic growth<br><em>[Client / case study], 6 months</em></span>
@@ -223,7 +193,7 @@
     <h2 class="section-title">Choose how deep you want to go</h2>
     <p class="section-sub">Every package is a <strong>6-month program</strong>, includes quality backlinks from month one, monthly reporting, and a direct line to me. This is the ongoing monthly investment — think of it as bringing on a specialist, not buying a one-off service.</p>
 
-    <div class="pricing-grid">
+    <div class="pricing-grid reveal-stagger">
 
       <div class="price-card">
         <div class="price-card-head">
@@ -311,7 +281,7 @@
     <p class="section-eyebrow">The honest guarantee</p>
     <h2 class="section-title">I won't promise you what I can't control. Here's what I can promise.</h2>
 
-    <div class="guarantee-card">
+    <div class="guarantee-card reveal">
       <div class="guarantee-split">
         <div class="guarantee-col">
           <span class="guarantee-icon guarantee-icon-no">✕</span>
@@ -336,7 +306,7 @@
   <div class="section-inner section-inner-narrow">
     <p class="section-eyebrow">Before you ask</p>
     <h2 class="section-title">Questions I get on every first call</h2>
-    <div class="faq-list">
+    <div class="faq-list reveal-stagger">
       <details class="faq-item">
         <summary>How long until I actually see results?</summary>
         <p>You'll see the audit and early fixes in weeks 1–2. Real ranking movement typically starts around month 2–3, and compounds from there. Anything faster is usually paid ads, not SEO.</p>
@@ -373,7 +343,7 @@
 </section>
 
 <footer class="footer">
-  <p>© <span id="year"></span> [Your Name] — SEO Consulting</p>
+  <p>© <span id="year"></span> TALON Search &amp; Technology — SEO Consulting</p>
 </footer>
 
 <script src="script.js"></script>
