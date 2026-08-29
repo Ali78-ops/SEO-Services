@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Ali78-ops/SEO-Services
   branch: main
+  base_url: https://seo-services-omega.vercel.app
 
 # Where uploaded images get stored in your repo, and how they're
 # referenced publicly on the live site.
@@ -20,12 +22,3 @@ collections:
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false, hint: "Short summary shown in blog previews" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "media_library"
-    label: "Image Library"
-    files:
-      - label: "Uploads"
-        name: "uploads_note"
-        file: "assets/uploads/.gitkeep"
-        fields:
-          - { label: "note", name: "note", widget: "hidden", default: "placeholder" }
