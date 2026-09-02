@@ -2,19 +2,19 @@
    TOKENS — TALON dark/gold identity
    ============================================ */
 :root {
-  --bg: #0D0C0A;
-  --surface: #17150F;
-  --surface-2: #1F1C15;
-  --border: rgba(201, 162, 39, 0.16);
-  --border-soft: rgba(245, 241, 230, 0.08);
-  --ink: #F5F1E6;
-  --ink-soft: #B0A896;
-  --ink-faint: #756D5C;
-  --gold: #C9A227;
-  --gold-light: #E8C468;
-  --gold-deep: #8B6F1F;
+  --bg: #2E1F16;
+  --surface: #3A2A1C;
+  --surface-2: #43301F;
+  --border: rgba(232, 185, 35, 0.18);
+  --border-soft: rgba(247, 243, 236, 0.08);
+  --ink: #F7F3EC;
+  --ink-soft: #C9B8A3;
+  --ink-faint: #8C7960;
+  --gold: #E8B923;
+  --gold-light: #F5D065;
+  --gold-deep: #A67D14;
   --white: #FFFFFF;
-  --black: #000000;
+  --black: #0A0806;
 
   --font-display: "Fraunces", serif;
   --font-body: "Work Sans", sans-serif;

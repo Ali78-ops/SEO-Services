@@ -2,7 +2,9 @@ backend:
   name: github
   repo: Ali78-ops/SEO-Services
   branch: main
-  base_url: https://seo-services-omega.vercel.app
+  base_url: https://decap-cms-oauth-hazel.vercel.app
+
+logo_url: "/assets/talon-mark.svg"
 
 # Where uploaded images get stored in your repo, and how they're
 # referenced publicly on the live site.
